@@ -92,9 +92,7 @@ export default function Sidebar({
         className="flex items-center justify-between gap-3 px-4 py-3 text-left lg:hidden"
       >
         <span className="min-w-0">
-          <span className="block truncate text-sm font-bold">
-            Игри на среќа - усогласеност
-          </span>
+          <span className="block truncate text-sm font-bold">КоцкаМапа</span>
           <span className="mt-0.5 flex gap-3 text-xs font-semibold">
             {STATUS_ORDER.map((s) => (
               <span key={s} style={{ color: STATUS_COLORS_DARK[s] }}>
@@ -114,7 +112,7 @@ export default function Sidebar({
         }`}
       >
         <header className="hidden px-4 pb-2 pt-4 lg:block">
-          <h1 className="text-lg font-bold">Игри на среќа - усогласеност</h1>
+          <h1 className="text-lg font-bold">КоцкаМапа</h1>
           <p className="mt-0.5 text-xs text-slate-400">
             Закон за игри на среќа (2026) · правило од 500 м од училишта
           </p>
