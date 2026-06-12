@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Circle,
   CircleMarker,
@@ -9,7 +9,11 @@ import {
   TileLayer,
   useMap,
 } from "react-leaflet";
-import { divIcon, type Marker as LeafletMarker } from "leaflet";
+import {
+  divIcon,
+  type Marker as LeafletMarker,
+  type PathOptions,
+} from "leaflet";
 import type { Feature } from "geojson";
 import {
   KIND_GLYPHS,
@@ -22,12 +26,24 @@ import {
 import type { School } from "../lib/types";
 import VenueDetail from "./VenueDetail";
 
-const ZONE_STYLE = {
-  color: "#dc2626",
-  weight: 1,
-  opacity: 0.6,
-  fillColor: "#dc2626",
-  fillOpacity: 0.12,
+type Basemap = "map" | "satellite";
+
+// Врз сателитски снимки зоната мора да е поизразена за да се гледа.
+const ZONE_STYLES: Record<Basemap, PathOptions> = {
+  map: {
+    color: "#dc2626",
+    weight: 1,
+    opacity: 0.6,
+    fillColor: "#dc2626",
+    fillOpacity: 0.12,
+  },
+  satellite: {
+    color: "#ef4444",
+    weight: 1.5,
+    opacity: 0.9,
+    fillColor: "#ef4444",
+    fillOpacity: 0.2,
+  },
 };
 
 const SKOPJE_CENTER: [number, number] = [41.9981, 21.4254];
@@ -84,8 +100,11 @@ export default function MapView({
   onSelect,
 }: Props) {
   const markerRefs = useRef(new Map<string, LeafletMarker>());
+  const [basemap, setBasemap] = useState<Basemap>("map");
+  const zoneStyle = ZONE_STYLES[basemap];
 
   return (
+    <div className="relative h-full w-full">
     <MapContainer
       center={SKOPJE_CENTER}
       zoom={12}
@@ -93,16 +112,33 @@ export default function MapView({
       scrollWheelZoom
       preferCanvas
     >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
-        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-      />
+      {basemap === "map" ? (
+        <TileLayer
+          key="base-map"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+        />
+      ) : (
+        <>
+          <TileLayer
+            key="base-satellite"
+            attribution='&copy; <a href="https://www.esri.com/">Esri</a> — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community'
+            url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+          />
+          {/* Натписи на места/улици врз сателитските снимки */}
+          <TileLayer
+            key="labels-satellite"
+            attribution='&copy; <a href="https://carto.com/attributions">CARTO</a>'
+            url="https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png"
+          />
+        </>
+      )}
 
       {showZones && zone && (
         <GeoJSON
-          key={`zone-${String(zone.properties?.scope)}`}
+          key={`zone-${String(zone.properties?.scope)}-${basemap}`}
           data={zone}
-          style={ZONE_STYLE}
+          style={zoneStyle}
         />
       )}
       {/* Резерва ако zones.geojson не постои: кругови по училиште */}
@@ -113,7 +149,7 @@ export default function MapView({
             key={`zone-${s.id}`}
             center={[s.lat, s.lng]}
             radius={RESTRICTION_RADIUS_M}
-            pathOptions={ZONE_STYLE}
+            pathOptions={zoneStyle}
           />
         ))}
 
@@ -162,5 +198,34 @@ export default function MapView({
 
       <SelectionController selected={selected} markerRefs={markerRefs} />
     </MapContainer>
+
+    {/* Преклопник Мапа / Сателит */}
+    <div
+      className="absolute right-3 top-3 z-[1000] flex overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-slate-900/10"
+      role="group"
+      aria-label="Подлога на мапата"
+    >
+      {(
+        [
+          ["map", "Мапа"],
+          ["satellite", "Сателит"],
+        ] as const
+      ).map(([key, label]) => (
+        <button
+          key={key}
+          type="button"
+          onClick={() => setBasemap(key)}
+          aria-pressed={basemap === key}
+          className={`px-3 py-1.5 text-xs font-semibold transition ${
+            basemap === key
+              ? "bg-slate-800 text-white"
+              : "bg-white text-slate-700 hover:bg-slate-100"
+          }`}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+    </div>
   );
 }
