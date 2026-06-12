@@ -45,6 +45,39 @@ body {
   box-shadow: 0 1px 4px rgb(0 0 0 / 0.4);
 }
 
+/* Натписи на општините */
+.muni-label {
+  background: transparent;
+  border: 0;
+}
+
+.muni-label span {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.muni-label-map span {
+  color: #475569;
+  text-shadow:
+    0 1px 2px #fff,
+    0 -1px 2px #fff,
+    1px 0 2px #fff,
+    -1px 0 2px #fff;
+}
+
+.muni-label-satellite span {
+  color: #fff;
+  text-shadow:
+    0 1px 3px rgb(0 0 0 / 0.9),
+    0 0 5px rgb(0 0 0 / 0.7);
+}
+
 .leaflet-popup-content {
   margin: 12px 14px;
 }

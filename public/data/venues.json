@@ -6,7 +6,8 @@
     "lat": 41.7376688,
     "lng": 22.1923817,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Штип"
   },
   {
     "id": "osm-n-6348219070",
@@ -15,7 +16,8 @@
     "lat": 41.7371353,
     "lng": 22.1912565,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Штип"
   },
   {
     "id": "osm-n-6348347623",
@@ -24,7 +26,8 @@
     "lat": 41.7384568,
     "lng": 22.1939057,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Штип"
   },
   {
     "id": "osm-n-9863488599",
@@ -33,7 +36,8 @@
     "lat": 41.743112,
     "lng": 22.1982682,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Штип"
   },
   {
     "id": "osm-n-11899331818",
@@ -42,7 +46,8 @@
     "lat": 41.9401133,
     "lng": 21.5142257,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кисела Вода"
   },
   {
     "id": "osm-n-13424657689",
@@ -51,7 +56,8 @@
     "lat": 41.9954394,
     "lng": 21.430426,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-w-1334497176",
@@ -60,7 +66,8 @@
     "lat": 41.9163331,
     "lng": 20.9417038,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Боговиње"
   },
   {
     "id": "osm-n-5055432424",
@@ -69,7 +76,8 @@
     "lat": 42.079176,
     "lng": 22.1816694,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кратово"
   },
   {
     "id": "osm-n-8910427387",
@@ -78,7 +86,8 @@
     "lat": 41.0282534,
     "lng": 21.3372384,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Битола"
   },
   {
     "id": "osm-n-10173244013",
@@ -87,7 +96,8 @@
     "lat": 41.1245282,
     "lng": 20.8117318,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-10203858690",
@@ -96,7 +106,8 @@
     "lat": 41.1765103,
     "lng": 20.6763328,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Струга"
   },
   {
     "id": "osm-n-11307055999",
@@ -105,7 +116,8 @@
     "lat": 41.0319529,
     "lng": 21.3347548,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Битола"
   },
   {
     "id": "osm-n-10209378794",
@@ -114,7 +126,8 @@
     "lat": 41.796462,
     "lng": 20.9109119,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гостивар"
   },
   {
     "id": "osm-n-6820837985",
@@ -123,7 +136,8 @@
     "lat": 41.9936306,
     "lng": 21.4360366,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-10177808919",
@@ -132,7 +146,8 @@
     "lat": 41.9943986,
     "lng": 21.4031837,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-12376343997",
@@ -140,7 +155,7 @@
     "kind": "betting_shop",
     "lat": 41.9871105,
     "lng": 21.4625943,
-    "municipality": "Cкoпje",
+    "municipality": "Аеродром",
     "address": "Булевар Јане Сандански бр. 24, Cкoпje",
     "source": "OSM",
     "verified": false
@@ -151,7 +166,7 @@
     "kind": "betting_shop",
     "lat": 42.0075147,
     "lng": 21.5027965,
-    "municipality": "Скопје",
+    "municipality": "Гази Баба",
     "address": "Скопје",
     "source": "OSM",
     "verified": false
@@ -163,7 +178,8 @@
     "lat": 41.1130024,
     "lng": 20.8017871,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-4356217190",
@@ -172,7 +188,8 @@
     "lat": 41.7383003,
     "lng": 22.1949766,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Штип"
   },
   {
     "id": "osm-n-4356305289",
@@ -181,7 +198,8 @@
     "lat": 41.7384527,
     "lng": 22.1961735,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Штип"
   },
   {
     "id": "osm-n-4360803292",
@@ -190,7 +208,8 @@
     "lat": 41.7371745,
     "lng": 22.1921393,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Штип"
   },
   {
     "id": "osm-n-4363539889",
@@ -199,7 +218,8 @@
     "lat": 41.7375115,
     "lng": 22.1902791,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Штип"
   },
   {
     "id": "osm-n-4411088898",
@@ -208,7 +228,8 @@
     "lat": 41.0289557,
     "lng": 21.3357312,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Битола"
   },
   {
     "id": "osm-n-6054032915",
@@ -217,7 +238,8 @@
     "lat": 41.9987688,
     "lng": 21.4235372,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-6054048704",
@@ -226,7 +248,8 @@
     "lat": 41.9993227,
     "lng": 21.438589,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Чаир"
   },
   {
     "id": "osm-n-6054048712",
@@ -235,7 +258,8 @@
     "lat": 42.0043198,
     "lng": 21.3840568,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-6054048717",
@@ -244,7 +268,8 @@
     "lat": 41.9980393,
     "lng": 21.424366,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-6054049786",
@@ -253,7 +278,8 @@
     "lat": 41.9971812,
     "lng": 21.4273087,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-6054049797",
@@ -262,7 +288,8 @@
     "lat": 41.9952638,
     "lng": 21.4235236,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-6054049807",
@@ -271,7 +298,8 @@
     "lat": 41.9963038,
     "lng": 21.4284562,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-6079524216",
@@ -280,7 +308,8 @@
     "lat": 42.0245494,
     "lng": 22.5879347,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Македонска Каменица"
   },
   {
     "id": "osm-n-8909816036",
@@ -289,7 +318,8 @@
     "lat": 41.0277413,
     "lng": 21.3363481,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Битола"
   },
   {
     "id": "osm-n-8917359379",
@@ -298,7 +328,8 @@
     "lat": 41.0313378,
     "lng": 21.3330311,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Битола"
   },
   {
     "id": "osm-n-9200216347",
@@ -307,7 +338,8 @@
     "lat": 42.0066408,
     "lng": 21.3619803,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Ѓорче Петров"
   },
   {
     "id": "osm-n-10211871901",
@@ -316,7 +348,8 @@
     "lat": 42.0547537,
     "lng": 21.3773131,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Чучер-Сандево"
   },
   {
     "id": "osm-n-11899331751",
@@ -325,7 +358,8 @@
     "lat": 41.9375318,
     "lng": 21.520867,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кисела Вода"
   },
   {
     "id": "osm-w-181361249",
@@ -334,7 +368,8 @@
     "lat": 41.1857031,
     "lng": 22.7219932,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Дојран"
   },
   {
     "id": "osm-w-983122126",
@@ -343,7 +378,8 @@
     "lat": 41.9831778,
     "lng": 21.4392449,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кисела Вода"
   },
   {
     "id": "osm-w-1312338837",
@@ -352,7 +388,8 @@
     "lat": 41.9401768,
     "lng": 21.51426,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кисела Вода"
   },
   {
     "id": "osm-w-1312338869",
@@ -361,7 +398,8 @@
     "lat": 41.9381258,
     "lng": 21.5170965,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кисела Вода"
   },
   {
     "id": "osm-w-1464176696",
@@ -370,7 +408,8 @@
     "lat": 41.9955325,
     "lng": 21.4768719,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гази Баба"
   },
   {
     "id": "osm-w-227416926",
@@ -389,7 +428,7 @@
     "kind": "casino",
     "lat": 42.0000784,
     "lng": 21.4271346,
-    "municipality": "Cкoпje",
+    "municipality": "Центар",
     "address": "Cкoпje",
     "source": "OSM",
     "verified": false
@@ -400,7 +439,7 @@
     "kind": "casino",
     "lat": 41.9960319,
     "lng": 21.4307798,
-    "municipality": "Cкoпje",
+    "municipality": "Центар",
     "address": "Максим Горки бр. 7, Cкoпje",
     "source": "OSM",
     "verified": false
@@ -411,7 +450,7 @@
     "kind": "casino",
     "lat": 42.003599,
     "lng": 21.3985653,
-    "municipality": "Cкoпje",
+    "municipality": "Карпош",
     "address": "Cкoпje",
     "source": "OSM",
     "verified": false
@@ -423,7 +462,8 @@
     "lat": 42.206988,
     "lng": 22.3361758,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Крива Паланка"
   },
   {
     "id": "osm-n-9567114576",
@@ -432,7 +472,8 @@
     "lat": 41.8648611,
     "lng": 21.9408472,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Свети Николе"
   },
   {
     "id": "osm-w-180455564",
@@ -441,7 +482,8 @@
     "lat": 41.1404653,
     "lng": 22.5400317,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гевгелија"
   },
   {
     "id": "osm-n-6054048491",
@@ -450,7 +492,8 @@
     "lat": 41.9975826,
     "lng": 21.4242615,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-8910483065",
@@ -459,7 +502,8 @@
     "lat": 41.0282694,
     "lng": 21.3372875,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Битола"
   },
   {
     "id": "osm-w-180455562",
@@ -468,7 +512,8 @@
     "lat": 41.1406613,
     "lng": 22.5399716,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гевгелија"
   },
   {
     "id": "osm-n-9124373622",
@@ -477,7 +522,8 @@
     "lat": 41.9957375,
     "lng": 21.4143191,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-5344777679",
@@ -486,7 +532,8 @@
     "lat": 42.0072989,
     "lng": 21.3715093,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-5790395955",
@@ -495,7 +542,8 @@
     "lat": 41.5126709,
     "lng": 20.9631584,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кичево"
   },
   {
     "id": "osm-n-6054034632",
@@ -504,7 +552,8 @@
     "lat": 41.9988629,
     "lng": 21.4232956,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-9200216333",
@@ -513,7 +562,8 @@
     "lat": 41.1169374,
     "lng": 20.8011925,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-10195320041",
@@ -522,7 +572,8 @@
     "lat": 41.994019,
     "lng": 21.4164398,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-10203858692",
@@ -531,7 +582,8 @@
     "lat": 41.176637,
     "lng": 20.6759482,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Струга"
   },
   {
     "id": "osm-n-10209378800",
@@ -540,7 +592,8 @@
     "lat": 41.796536,
     "lng": 20.9144197,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гостивар"
   },
   {
     "id": "osm-n-10211871860",
@@ -549,7 +602,8 @@
     "lat": 42.14044,
     "lng": 21.71922,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Куманово"
   },
   {
     "id": "osm-n-10211871899",
@@ -558,7 +612,8 @@
     "lat": 42.018258,
     "lng": 21.4097806,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-6821158585",
@@ -567,7 +622,8 @@
     "lat": 41.9951324,
     "lng": 21.4325014,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-9200215928",
@@ -576,7 +632,8 @@
     "lat": 41.9880034,
     "lng": 21.4364245,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-10202842071",
@@ -585,7 +642,8 @@
     "lat": 41.177865,
     "lng": 20.6782481,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Струга"
   },
   {
     "id": "osm-n-12222295024",
@@ -594,7 +652,8 @@
     "lat": 41.9985122,
     "lng": 21.4247042,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-12750055210",
@@ -603,7 +662,7 @@
     "operator": "ДТУ АПЕКС МК ДОО",
     "lat": 41.9391025,
     "lng": 21.5156312,
-    "municipality": "Драчево",
+    "municipality": "Кисела Вода",
     "address": "Иван Хаџиниколов бр. 8, Драчево",
     "source": "OSM",
     "verified": false
@@ -615,7 +674,8 @@
     "lat": 41.9854986,
     "lng": 21.4669788,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Аеродром"
   },
   {
     "id": "osm-n-4437622042",
@@ -624,7 +684,8 @@
     "lat": 41.1411241,
     "lng": 22.503936,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гевгелија"
   },
   {
     "id": "osm-n-6258693385",
@@ -633,7 +694,8 @@
     "lat": 42.0010232,
     "lng": 21.4127132,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-w-410064786",
@@ -642,7 +704,8 @@
     "lat": 41.9954327,
     "lng": 21.4094671,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-w-305388567",
@@ -651,7 +714,8 @@
     "lat": 41.1153402,
     "lng": 20.800496,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-6054048489",
@@ -660,7 +724,8 @@
     "lat": 41.9998538,
     "lng": 21.4159092,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-12758331211",
@@ -669,7 +734,8 @@
     "lat": 42.0020725,
     "lng": 21.4005999,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-w-1334317359",
@@ -678,7 +744,8 @@
     "lat": 42.0084522,
     "lng": 20.9744835,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Тетово"
   },
   {
     "id": "osm-n-529808093",
@@ -687,7 +754,8 @@
     "lat": 41.4339118,
     "lng": 22.0113129,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кавадарци"
   },
   {
     "id": "osm-n-10203858700",
@@ -696,7 +764,8 @@
     "lat": 41.1765254,
     "lng": 20.6759512,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Струга"
   },
   {
     "id": "osm-n-10173264240",
@@ -705,7 +774,8 @@
     "lat": 41.1241408,
     "lng": 20.8119766,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-10173275718",
@@ -714,7 +784,8 @@
     "lat": 41.1242528,
     "lng": 20.8119133,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-w-1464176697",
@@ -723,7 +794,8 @@
     "lat": 41.9953427,
     "lng": 21.476316,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гази Баба"
   },
   {
     "id": "osm-w-306911904",
@@ -732,7 +804,8 @@
     "lat": 41.1705935,
     "lng": 22.7476355,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Дојран"
   },
   {
     "id": "osm-n-10198287818",
@@ -741,7 +814,8 @@
     "lat": 41.990761,
     "lng": 21.4454859,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Аеродром"
   },
   {
     "id": "osm-n-9161043718",
@@ -750,7 +824,8 @@
     "lat": 41.1134782,
     "lng": 20.8013803,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-10202493102",
@@ -759,7 +834,8 @@
     "lat": 41.1782698,
     "lng": 20.6762841,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Струга"
   },
   {
     "id": "osm-n-4327921318",
@@ -768,7 +844,8 @@
     "lat": 42.0034137,
     "lng": 21.3986642,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-10209378795",
@@ -777,7 +854,8 @@
     "lat": 41.796462,
     "lng": 20.9110352,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гостивар"
   },
   {
     "id": "osm-n-10173451385",
@@ -786,7 +864,8 @@
     "lat": 41.1123068,
     "lng": 20.8024404,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-11276711866",
@@ -796,7 +875,8 @@
     "lat": 41.0323659,
     "lng": 21.3419969,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Битола"
   },
   {
     "id": "osm-w-181363054",
@@ -805,7 +885,8 @@
     "lat": 41.1856686,
     "lng": 22.7221083,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Дојран"
   },
   {
     "id": "osm-n-4594432345",
@@ -814,7 +895,8 @@
     "lat": 41.994873,
     "lng": 21.4359281,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-w-1500626462",
@@ -822,7 +904,7 @@
     "kind": "casino",
     "lat": 42.1333711,
     "lng": 21.3082108,
-    "municipality": "Блаце",
+    "municipality": "Чучер-Сандево",
     "address": "Блаце",
     "source": "OSM",
     "verified": false
@@ -834,7 +916,8 @@
     "lat": 41.1133266,
     "lng": 20.8017728,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-4267660931",
@@ -843,7 +926,8 @@
     "lat": 42.0048718,
     "lng": 20.9900766,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Тетово"
   },
   {
     "id": "osm-n-10204019538",
@@ -852,7 +936,8 @@
     "lat": 41.1741743,
     "lng": 20.6801345,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Струга"
   },
   {
     "id": "osm-n-6814247287",
@@ -861,7 +946,8 @@
     "lat": 41.9956039,
     "lng": 21.4261917,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-w-1359827564",
@@ -870,7 +956,8 @@
     "lat": 41.1713348,
     "lng": 22.7408677,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Дојран"
   },
   {
     "id": "osm-n-6834500687",
@@ -879,7 +966,8 @@
     "lat": 41.1093236,
     "lng": 20.8111031,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-9200216564",
@@ -888,7 +976,8 @@
     "lat": 41.9888391,
     "lng": 21.4364135,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-9200216568",
@@ -897,7 +986,8 @@
     "lat": 42.0004527,
     "lng": 21.4124568,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-9200216719",
@@ -906,7 +996,8 @@
     "lat": 41.9980552,
     "lng": 21.4242266,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-12758331214",
@@ -915,7 +1006,8 @@
     "lat": 42.0030515,
     "lng": 21.3931372,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-12872585700",
@@ -924,7 +1016,8 @@
     "lat": 41.9940899,
     "lng": 21.432116,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-12872686401",
@@ -933,7 +1026,8 @@
     "lat": 41.9957405,
     "lng": 21.501022,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гази Баба"
   },
   {
     "id": "osm-n-12872686402",
@@ -942,7 +1036,8 @@
     "lat": 42.0150503,
     "lng": 21.4439315,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Чаир"
   },
   {
     "id": "osm-n-12872686403",
@@ -951,7 +1046,8 @@
     "lat": 41.9846921,
     "lng": 21.4552688,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Аеродром"
   },
   {
     "id": "osm-n-12872686404",
@@ -960,7 +1056,8 @@
     "lat": 41.98227,
     "lng": 21.48253,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Аеродром"
   },
   {
     "id": "osm-n-12872686405",
@@ -969,7 +1066,8 @@
     "lat": 41.9929796,
     "lng": 21.4403075,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-12872686406",
@@ -978,7 +1076,8 @@
     "lat": 41.98045,
     "lng": 21.46045,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Аеродром"
   },
   {
     "id": "osm-n-12872686407",
@@ -987,7 +1086,8 @@
     "lat": 42.0325161,
     "lng": 21.4440921,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Бутел"
   },
   {
     "id": "osm-n-12872686408",
@@ -996,7 +1096,8 @@
     "lat": 41.9165971,
     "lng": 22.4099556,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кочани"
   },
   {
     "id": "osm-n-12872686409",
@@ -1005,7 +1106,8 @@
     "lat": 42.0091626,
     "lng": 20.9759608,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Тетово"
   },
   {
     "id": "osm-n-12872686410",
@@ -1014,7 +1116,8 @@
     "lat": 41.1143037,
     "lng": 20.8015716,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-12872686411",
@@ -1023,7 +1126,8 @@
     "lat": 41.0377,
     "lng": 21.345824,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Битола"
   },
   {
     "id": "osm-n-12872686412",
@@ -1032,7 +1136,8 @@
     "lat": 41.7933505,
     "lng": 20.9092918,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гостивар"
   },
   {
     "id": "osm-n-12872686413",
@@ -1041,7 +1146,8 @@
     "lat": 41.02721,
     "lng": 21.31384,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Битола"
   },
   {
     "id": "osm-n-12872686414",
@@ -1050,7 +1156,8 @@
     "lat": 41.7914927,
     "lng": 20.9076718,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гостивар"
   },
   {
     "id": "osm-n-12872686415",
@@ -1059,7 +1166,8 @@
     "lat": 41.1776203,
     "lng": 20.6827632,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Струга"
   },
   {
     "id": "osm-n-13271831728",
@@ -1068,7 +1176,8 @@
     "lat": 41.3473948,
     "lng": 21.5567261,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Прилеп"
   },
   {
     "id": "osm-n-13271831729",
@@ -1077,7 +1186,8 @@
     "lat": 42.0402535,
     "lng": 21.3950855,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Бутел"
   },
   {
     "id": "osm-n-13271831730",
@@ -1086,7 +1196,8 @@
     "lat": 41.143502,
     "lng": 22.502982,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гевгелија"
   },
   {
     "id": "osm-n-13271831731",
@@ -1095,7 +1206,8 @@
     "lat": 41.9833896,
     "lng": 21.4395666,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кисела Вода"
   },
   {
     "id": "osm-n-13271831732",
@@ -1104,7 +1216,8 @@
     "lat": 42.1370869,
     "lng": 21.7176426,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Куманово"
   },
   {
     "id": "osm-n-13271831733",
@@ -1113,7 +1226,8 @@
     "lat": 41.9972196,
     "lng": 20.9608948,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Тетово"
   },
   {
     "id": "osm-n-13271831734",
@@ -1122,7 +1236,8 @@
     "lat": 41.6324568,
     "lng": 22.4637419,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Радовиш"
   },
   {
     "id": "osm-n-13271831735",
@@ -1131,7 +1246,8 @@
     "lat": 41.7423931,
     "lng": 22.1927986,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Штип"
   },
   {
     "id": "osm-n-13304196444",
@@ -1140,7 +1256,8 @@
     "lat": 41.7983296,
     "lng": 20.9140715,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гостивар"
   },
   {
     "id": "osm-n-5242828728",
@@ -1149,7 +1266,8 @@
     "lat": 42.0032317,
     "lng": 21.4081008,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-5318299749",
@@ -1158,7 +1276,8 @@
     "lat": 41.9672591,
     "lng": 22.7745815,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Делчево"
   },
   {
     "id": "osm-n-5344777680",
@@ -1167,7 +1286,8 @@
     "lat": 42.0074885,
     "lng": 21.3713009,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-10177776266",
@@ -1176,7 +1296,8 @@
     "lat": 41.9944477,
     "lng": 21.4031966,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-10202493089",
@@ -1185,7 +1306,8 @@
     "lat": 41.1774241,
     "lng": 20.6732508,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Струга"
   },
   {
     "id": "osm-n-10203858684",
@@ -1194,7 +1316,8 @@
     "lat": 41.1763085,
     "lng": 20.6759537,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Струга"
   },
   {
     "id": "osm-n-10209378796",
@@ -1203,7 +1326,8 @@
     "lat": 41.796462,
     "lng": 20.9111334,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гостивар"
   },
   {
     "id": "osm-n-11487095133",
@@ -1212,7 +1336,8 @@
     "lat": 42.0034317,
     "lng": 21.3975203,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-12312249877",
@@ -1221,7 +1346,8 @@
     "lat": 42.0776781,
     "lng": 22.181626,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кратово"
   },
   {
     "id": "osm-n-529808066",
@@ -1230,7 +1356,8 @@
     "lat": 41.4357199,
     "lng": 22.0110468,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кавадарци"
   },
   {
     "id": "osm-n-5344777682",
@@ -1239,7 +1366,8 @@
     "lat": 42.0079507,
     "lng": 21.3696473,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-6054049810",
@@ -1248,7 +1376,8 @@
     "lat": 42.0002627,
     "lng": 21.4162338,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-6821158693",
@@ -1257,7 +1386,8 @@
     "lat": 41.9949915,
     "lng": 21.4311478,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-9161043719",
@@ -1266,7 +1396,8 @@
     "lat": 41.1130157,
     "lng": 20.8015731,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-9200216068",
@@ -1275,7 +1406,8 @@
     "lat": 41.9883882,
     "lng": 21.4366456,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Центар"
   },
   {
     "id": "osm-n-11246139003",
@@ -1284,7 +1416,8 @@
     "lat": 41.7964447,
     "lng": 20.9106145,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Гостивар"
   },
   {
     "id": "osm-n-11275585240",
@@ -1293,7 +1426,8 @@
     "lat": 41.9854231,
     "lng": 21.4381294,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Кисела Вода"
   },
   {
     "id": "osm-n-12059757239",
@@ -1302,7 +1436,8 @@
     "lat": 42.0034247,
     "lng": 21.3993746,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-12216569178",
@@ -1311,7 +1446,8 @@
     "lat": 41.9996062,
     "lng": 21.4364423,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Чаир"
   },
   {
     "id": "osm-n-4881325494",
@@ -1321,7 +1457,8 @@
     "lat": 42.0061879,
     "lng": 21.4062967,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-6814246722",
@@ -1330,7 +1467,8 @@
     "lat": 41.9997139,
     "lng": 21.4372837,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Чаир"
   },
   {
     "id": "osm-n-6837039800",
@@ -1339,7 +1477,8 @@
     "lat": 41.1176628,
     "lng": 20.815584,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-8908302075",
@@ -1348,7 +1487,8 @@
     "lat": 41.0265417,
     "lng": 21.3367894,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Битола"
   },
   {
     "id": "osm-n-4130738812",
@@ -1357,7 +1497,7 @@
     "operator": "Спорт-Лаиф Трејд ДОО Скопје",
     "lat": 41.9995207,
     "lng": 21.3918014,
-    "municipality": "Cкoпje",
+    "municipality": "Карпош",
     "address": "Cкoпje",
     "source": "OSM",
     "verified": false
@@ -1369,7 +1509,8 @@
     "lat": 41.1244899,
     "lng": 20.8121092,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-10203858679",
@@ -1378,7 +1519,8 @@
     "lat": 41.1757668,
     "lng": 20.6760321,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Струга"
   },
   {
     "id": "osm-n-11532129364",
@@ -1386,7 +1528,7 @@
     "kind": "betting_shop",
     "lat": 42.0058221,
     "lng": 21.5034024,
-    "municipality": "Скопје",
+    "municipality": "Гази Баба",
     "address": "Скопје",
     "source": "OSM",
     "verified": false
@@ -1409,7 +1551,8 @@
     "lat": 41.1770874,
     "lng": 20.6730084,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Струга"
   },
   {
     "id": "osm-n-4990142142",
@@ -1419,7 +1562,8 @@
     "lng": 21.4512951,
     "address": "Радишанска",
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Бутел"
   },
   {
     "id": "osm-n-4990148632",
@@ -1428,7 +1572,8 @@
     "lat": 41.9960148,
     "lng": 21.4092857,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-6837039796",
@@ -1437,7 +1582,8 @@
     "lat": 41.1134879,
     "lng": 20.816241,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-989142840",
@@ -1446,7 +1592,8 @@
     "lat": 41.7382806,
     "lng": 22.1942983,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Штип"
   },
   {
     "id": "osm-n-10211871900",
@@ -1455,7 +1602,8 @@
     "lat": 42.03591,
     "lng": 21.39971,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Бутел"
   },
   {
     "id": "osm-n-9025119026",
@@ -1464,7 +1612,8 @@
     "lat": 41.3677232,
     "lng": 21.2484906,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Крушево"
   },
   {
     "id": "osm-n-12588665305",
@@ -1473,7 +1622,8 @@
     "lat": 41.7728957,
     "lng": 22.1405593,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Штип"
   },
   {
     "id": "osm-n-10173461455",
@@ -1482,7 +1632,8 @@
     "lat": 41.1124345,
     "lng": 20.8025554,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Охрид"
   },
   {
     "id": "osm-n-10184021892",
@@ -1491,7 +1642,8 @@
     "lat": 41.9941239,
     "lng": 21.4010265,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   },
   {
     "id": "osm-n-4990142140",
@@ -1500,6 +1652,7 @@
     "lat": 41.9958867,
     "lng": 21.4087335,
     "source": "OSM",
-    "verified": false
+    "verified": false,
+    "municipality": "Карпош"
   }
 ]

@@ -136,6 +136,20 @@ export default function Filters({ filters, municipalities, onChange }: Props) {
             />
             Прикажи зони од 500 м
           </label>
+          <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-200">
+            <input
+              type="checkbox"
+              checked={filters.showMunicipalities}
+              onChange={() =>
+                onChange({
+                  ...filters,
+                  showMunicipalities: !filters.showMunicipalities,
+                })
+              }
+              className="accent-indigo-500"
+            />
+            Прикажи општини
+          </label>
         </div>
         <p className="mt-1.5 text-[11px] leading-snug text-slate-500">
           Изборот влијае само на приказот — статусите секогаш се пресметуваат

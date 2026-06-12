@@ -14,6 +14,7 @@ export interface FiltersState {
   query: string;
   showSchools: boolean;
   showZones: boolean;
+  showMunicipalities: boolean;
 }
 
 export const DEFAULT_FILTERS: FiltersState = {
@@ -29,12 +30,15 @@ export const DEFAULT_FILTERS: FiltersState = {
   query: "",
   showSchools: true,
   showZones: true,
+  showMunicipalities: true,
 };
 
 export default function App() {
   const [schools, setSchools] = useState<School[] | null>(null);
   const [venues, setVenues] = useState<Venue[] | null>(null);
   const [zones, setZones] = useState<FeatureCollection | null>(null);
+  const [muniBoundaries, setMuniBoundaries] =
+    useState<FeatureCollection | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [filters, setFilters] = useState<FiltersState>(DEFAULT_FILTERS);
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -66,6 +70,14 @@ export default function App() {
       .then((r) => (r.ok ? (r.json() as Promise<FeatureCollection>) : null))
       .then(setZones)
       .catch(() => setZones(null));
+  }, []);
+
+  // Граници на општините (опционален слој).
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data/municipalities.geojson`)
+      .then((r) => (r.ok ? (r.json() as Promise<FeatureCollection>) : null))
+      .then(setMuniBoundaries)
+      .catch(() => setMuniBoundaries(null));
   }, []);
 
   const classified = useMemo<ClassifiedVenue[]>(
@@ -174,6 +186,8 @@ export default function App() {
           venues={filtered}
           zone={zoneFeature}
           zonesAvailable={zones !== null}
+          municipalities={muniBoundaries}
+          showMunicipalities={filters.showMunicipalities}
           showSchools={filters.showSchools}
           showZones={filters.showZones}
           selected={selected}

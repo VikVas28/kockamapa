@@ -8,13 +8,14 @@ import {
   Popup,
   TileLayer,
   useMap,
+  useMapEvents,
 } from "react-leaflet";
 import {
   divIcon,
   type Marker as LeafletMarker,
   type PathOptions,
 } from "leaflet";
-import type { Feature } from "geojson";
+import type { Feature, FeatureCollection } from "geojson";
 import {
   KIND_GLYPHS,
   RESTRICTION_RADIUS_M,
@@ -45,6 +46,33 @@ const ZONE_STYLES: Record<Basemap, PathOptions> = {
     fillOpacity: 0.2,
   },
 };
+
+const MUNI_STYLES: Record<Basemap, PathOptions> = {
+  map: { color: "#64748b", weight: 1, opacity: 0.7, fill: false, dashArray: "4 3" },
+  satellite: { color: "#fff", weight: 1.2, opacity: 0.85, fill: false, dashArray: "4 3" },
+};
+
+// Натписите на општините се видливи од ова зумирање нагоре.
+const MUNI_LABEL_MIN_ZOOM = 10;
+
+function escapeHtml(s: string) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function muniLabelIcon(name: string, basemap: Basemap) {
+  return divIcon({
+    className: `muni-label muni-label-${basemap}`,
+    html: `<span>${escapeHtml(name)}</span>`,
+    iconSize: [0, 0],
+  });
+}
+
+function ZoomWatcher({ onZoom }: { onZoom: (zoom: number) => void }) {
+  const map = useMapEvents({
+    zoomend: () => onZoom(map.getZoom()),
+  });
+  return null;
+}
 
 const SKOPJE_CENTER: [number, number] = [41.9981, 21.4254];
 
@@ -83,6 +111,8 @@ interface Props {
   venues: ClassifiedVenue[];
   zone: Feature | null;
   zonesAvailable: boolean;
+  municipalities: FeatureCollection | null;
+  showMunicipalities: boolean;
   showSchools: boolean;
   showZones: boolean;
   selected: ClassifiedVenue | null;
@@ -94,6 +124,8 @@ export default function MapView({
   venues,
   zone,
   zonesAvailable,
+  municipalities,
+  showMunicipalities,
   showSchools,
   showZones,
   selected,
@@ -101,6 +133,7 @@ export default function MapView({
 }: Props) {
   const markerRefs = useRef(new Map<string, LeafletMarker>());
   const [basemap, setBasemap] = useState<Basemap>("map");
+  const [zoom, setZoom] = useState(12);
   const zoneStyle = ZONE_STYLES[basemap];
 
   return (
@@ -125,14 +158,40 @@ export default function MapView({
             attribution='&copy; <a href="https://www.esri.com/">Esri</a> — Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community'
             url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
           />
-          {/* Натписи на места/улици врз сателитските снимки */}
+          {/* Светли натписи на места/улици — читливи врз темни снимки */}
           <TileLayer
             key="labels-satellite"
             attribution='&copy; <a href="https://carto.com/attributions">CARTO</a>'
-            url="https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png"
+            url="https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png"
           />
         </>
       )}
+
+      {showMunicipalities && municipalities && (
+        <GeoJSON
+          key={`munis-${basemap}`}
+          data={municipalities}
+          style={MUNI_STYLES[basemap]}
+        />
+      )}
+      {showMunicipalities &&
+        municipalities &&
+        zoom >= MUNI_LABEL_MIN_ZOOM &&
+        municipalities.features.map((f) => {
+          const name = f.properties?.name as string | undefined;
+          const center = f.properties?.center as [number, number] | undefined;
+          if (!name || !center) return null;
+          return (
+            <Marker
+              key={`muni-label-${name}-${basemap}`}
+              position={center}
+              icon={muniLabelIcon(name, basemap)}
+              interactive={false}
+              keyboard={false}
+              zIndexOffset={-1000}
+            />
+          );
+        })}
 
       {showZones && zone && (
         <GeoJSON
@@ -197,6 +256,7 @@ export default function MapView({
       ))}
 
       <SelectionController selected={selected} markerRefs={markerRefs} />
+      <ZoomWatcher onZoom={setZoom} />
     </MapContainer>
 
     {/* Преклопник Мапа / Сателит */}
