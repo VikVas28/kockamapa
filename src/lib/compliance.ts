@@ -84,4 +84,7 @@ export const SCHOOL_TYPE_LABELS: Record<SchoolType, string> = {
   secondary: "Средно училиште",
 };
 
-export const SCHOOL_COLOR = "#4f46e5";
+export const SCHOOL_COLORS: Record<SchoolType, string> = {
+  primary: "#4f46e5",
+  secondary: "#0891b2",
+};

@@ -1,13 +1,15 @@
 import { useEffect, useMemo, useState } from "react";
+import type { Feature, FeatureCollection } from "geojson";
 import MapView from "./components/MapView";
 import Sidebar from "./components/Sidebar";
 import Legend from "./components/Legend";
 import { classifyAll, type ClassifiedVenue } from "./lib/compliance";
-import type { School, Status, Venue, VenueKind } from "./lib/types";
+import type { School, SchoolType, Status, Venue, VenueKind } from "./lib/types";
 
 export interface FiltersState {
   kinds: Record<VenueKind, boolean>;
   statuses: Record<Status, boolean>;
+  schoolTypes: Record<SchoolType, boolean>;
   municipality: string; // "all" или име на општина
   query: string;
   showSchools: boolean;
@@ -22,6 +24,7 @@ export const DEFAULT_FILTERS: FiltersState = {
     betting_shop: true,
   },
   statuses: { compliant: true, restricted: true, must_relocate: true },
+  schoolTypes: { primary: true, secondary: true },
   municipality: "all",
   query: "",
   showSchools: true,
@@ -31,6 +34,7 @@ export const DEFAULT_FILTERS: FiltersState = {
 export default function App() {
   const [schools, setSchools] = useState<School[] | null>(null);
   const [venues, setVenues] = useState<Venue[] | null>(null);
+  const [zones, setZones] = useState<FeatureCollection | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [filters, setFilters] = useState<FiltersState>(DEFAULT_FILTERS);
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -54,6 +58,14 @@ export default function App() {
       .catch((e: Error) =>
         setLoadError(`Не може да се вчитаат податоците (${e.message}).`),
       );
+  }, []);
+
+  // Споените зони од 500 м се опционални — без нив се цртаат кругови.
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data/zones.geojson`)
+      .then((r) => (r.ok ? (r.json() as Promise<FeatureCollection>) : null))
+      .then(setZones)
+      .catch(() => setZones(null));
   }, []);
 
   const classified = useMemo<ClassifiedVenue[]>(
@@ -111,6 +123,21 @@ export default function App() {
     [filtered, selectedId],
   );
 
+  // Училишта за приказ — филтерот важи само за приказот; статусите секогаш
+  // се пресметуваат спрема СИТЕ училишта (законот важи за основни и средни).
+  const visibleSchools = useMemo(
+    () => (schools ?? []).filter((s) => filters.schoolTypes[s.type]),
+    [schools, filters.schoolTypes],
+  );
+
+  const zoneFeature = useMemo<Feature | null>(() => {
+    if (!zones) return null;
+    const { primary, secondary } = filters.schoolTypes;
+    if (!primary && !secondary) return null;
+    const scope = primary && secondary ? "all" : primary ? "primary" : "secondary";
+    return zones.features.find((f) => f.properties?.scope === scope) ?? null;
+  }, [zones, filters.schoolTypes]);
+
   if (loadError) {
     return (
       <div className="flex h-dvh items-center justify-center bg-slate-950 px-6">
@@ -143,8 +170,10 @@ export default function App() {
       />
       <main className="relative order-1 min-h-0 flex-1 lg:order-2">
         <MapView
-          schools={schools}
+          schools={visibleSchools}
           venues={filtered}
+          zone={zoneFeature}
+          zonesAvailable={zones !== null}
           showSchools={filters.showSchools}
           showZones={filters.showZones}
           selected={selected}

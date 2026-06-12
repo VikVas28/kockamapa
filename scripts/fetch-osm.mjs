@@ -140,6 +140,42 @@ function dedupe(items, threshold) {
   return kept;
 }
 
+// Во OSM под amenity=school погрешно се мапирани и градинки, универзитети,
+// јазични курсеви и автошколи — тие не се основни/средни училишта по законот.
+const NOT_A_SCHOOL = /градинк|универзитет|факултет|курс|автошкол|driving/i;
+
+const NAMELESS_SCHOOL = "Училиште (без име)";
+
+function normalizedName(name) {
+  return name.toLowerCase().replace(/[^a-zа-џѐѝ]+/gi, "");
+}
+
+// Построга дедупликација за училишта:
+//  - именуваните имаат предност пред „без име“
+//  - < 30 м = иста зграда, спој безусловно
+//  - точка „без име“ на < 250 м од задржано училиште = дупликат
+//  - исто нормализирано име на < 300 м = дупликат
+function dedupeSchools(items) {
+  const sorted = [...items].sort((a, b) => {
+    const aNamed = a.name === NAMELESS_SCHOOL ? 0 : 1;
+    const bNamed = b.name === NAMELESS_SCHOOL ? 0 : 1;
+    if (aNamed !== bNamed) return bNamed - aNamed;
+    return b.name.length - a.name.length;
+  });
+  const kept = [];
+  for (const item of sorted) {
+    const nameless = item.name === NAMELESS_SCHOOL;
+    const dup = kept.find((k) => {
+      const dist = distanceMeters(k, item);
+      if (dist < 30) return true;
+      if (nameless && dist < 250) return true;
+      return normalizedName(k.name) === normalizedName(item.name) && dist < 300;
+    });
+    if (!dup) kept.push(item);
+  }
+  return kept;
+}
+
 console.log("Повлекувам училишта…");
 const schoolElements = await overpass(SCHOOLS_QUERY);
 let schools = schoolElements
@@ -147,9 +183,12 @@ let schools = schoolElements
     const c = center(el);
     const tags = el.tags ?? {};
     if (!c) return null;
+    const name = (tags.name ?? tags["name:mk"] ?? NAMELESS_SCHOOL)
+      .replace(/\s+/g, " ")
+      .trim();
     return {
       id: `osm-${el.type[0]}-${el.id}`,
-      name: tags.name ?? tags["name:mk"] ?? "Училиште (без име)",
+      name,
       type: schoolType(tags),
       lat: c.lat,
       lng: c.lng,
@@ -158,8 +197,9 @@ let schools = schoolElements
       source: "OSM",
     };
   })
-  .filter(Boolean);
-schools = dedupe(schools, 250).sort((a, b) =>
+  .filter(Boolean)
+  .filter((s) => !NOT_A_SCHOOL.test(s.name));
+schools = dedupeSchools(schools).sort((a, b) =>
   a.name.localeCompare(b.name, "mk"),
 );
 
@@ -173,7 +213,9 @@ let venues = venueElements
     if (!c || !kind) return null;
     return {
       id: `osm-${el.type[0]}-${el.id}`,
-      name: tags.name ?? tags["name:mk"] ?? KIND_FALLBACK_NAMES[kind],
+      name: (tags.name ?? tags["name:mk"] ?? KIND_FALLBACK_NAMES[kind])
+        .replace(/\s+/g, " ")
+        .trim(),
       kind,
       operator: tags.operator,
       lat: c.lat,

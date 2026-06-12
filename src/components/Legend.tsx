@@ -1,4 +1,4 @@
-import { SCHOOL_COLOR, STATUS_COLORS } from "../lib/compliance";
+import { SCHOOL_COLORS, STATUS_COLORS } from "../lib/compliance";
 
 function Dot({ color }: { color: string }) {
   return (
@@ -23,11 +23,18 @@ export default function Legend() {
         <Dot color={STATUS_COLORS.compliant} /> Сообразен
       </p>
       <p className="flex items-center gap-2">
-        <Dot color={SCHOOL_COLOR} /> Училиште
+        <Dot color={SCHOOL_COLORS.primary} /> Основно училиште
       </p>
       <p className="flex items-center gap-2">
-        <span className="inline-block h-3 w-3 shrink-0 rounded-full border border-red-500 bg-red-500/10" />
-        Зона од 500 м околу училиште
+        <Dot color={SCHOOL_COLORS.secondary} /> Средно училиште
+      </p>
+      <p className="flex items-center gap-2">
+        <span className="inline-block h-3 w-3 shrink-0 rounded-sm border border-red-500 bg-red-500/15" />
+        Зона ≤ 500 м од училиште
+      </p>
+      <p className="border-t border-slate-200 pt-1.5 text-[11px] text-slate-500">
+        Ознаки на маркерите: К казино · А автомат клуб · Е е-игри · О
+        обложувалница
       </p>
     </div>
   );

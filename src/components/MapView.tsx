@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import {
   Circle,
   CircleMarker,
+  GeoJSON,
   MapContainer,
   Marker,
   Popup,
@@ -9,16 +10,25 @@ import {
   useMap,
 } from "react-leaflet";
 import { divIcon, type Marker as LeafletMarker } from "leaflet";
+import type { Feature } from "geojson";
 import {
   KIND_GLYPHS,
   RESTRICTION_RADIUS_M,
-  SCHOOL_COLOR,
+  SCHOOL_COLORS,
   SCHOOL_TYPE_LABELS,
   STATUS_COLORS,
   type ClassifiedVenue,
 } from "../lib/compliance";
 import type { School } from "../lib/types";
 import VenueDetail from "./VenueDetail";
+
+const ZONE_STYLE = {
+  color: "#dc2626",
+  weight: 1,
+  opacity: 0.6,
+  fillColor: "#dc2626",
+  fillOpacity: 0.12,
+};
 
 const SKOPJE_CENTER: [number, number] = [41.9981, 21.4254];
 
@@ -55,6 +65,8 @@ function SelectionController({ selected, markerRefs }: SelectionProps) {
 interface Props {
   schools: School[];
   venues: ClassifiedVenue[];
+  zone: Feature | null;
+  zonesAvailable: boolean;
   showSchools: boolean;
   showZones: boolean;
   selected: ClassifiedVenue | null;
@@ -64,6 +76,8 @@ interface Props {
 export default function MapView({
   schools,
   venues,
+  zone,
+  zonesAvailable,
   showSchools,
   showZones,
   selected,
@@ -84,19 +98,22 @@ export default function MapView({
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       />
 
+      {showZones && zone && (
+        <GeoJSON
+          key={`zone-${String(zone.properties?.scope)}`}
+          data={zone}
+          style={ZONE_STYLE}
+        />
+      )}
+      {/* Резерва ако zones.geojson не постои: кругови по училиште */}
       {showZones &&
+        !zonesAvailable &&
         schools.map((s) => (
           <Circle
             key={`zone-${s.id}`}
             center={[s.lat, s.lng]}
             radius={RESTRICTION_RADIUS_M}
-            pathOptions={{
-              color: "#dc2626",
-              weight: 1,
-              opacity: 0.5,
-              fillColor: "#dc2626",
-              fillOpacity: 0.08,
-            }}
+            pathOptions={ZONE_STYLE}
           />
         ))}
 
@@ -105,12 +122,12 @@ export default function MapView({
           <CircleMarker
             key={s.id}
             center={[s.lat, s.lng]}
-            radius={5}
+            radius={4}
             pathOptions={{
               color: "#fff",
-              weight: 1.5,
-              fillColor: SCHOOL_COLOR,
-              fillOpacity: 0.9,
+              weight: 1,
+              fillColor: SCHOOL_COLORS[s.type],
+              fillOpacity: 0.85,
             }}
           >
             <Popup>
