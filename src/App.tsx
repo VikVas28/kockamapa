@@ -25,11 +25,11 @@ export default function App() {
   useEffect(() => {
     const base = import.meta.env.BASE_URL;
     Promise.all([
-      fetch(`${base}data/schools.json`).then((r) => {
+      fetch(`${base}data/schools.json`, { cache: "no-cache" }).then((r) => {
         if (!r.ok) throw new Error("schools.json");
         return r.json() as Promise<School[]>;
       }),
-      fetch(`${base}data/venues.json`).then((r) => {
+      fetch(`${base}data/venues.json`, { cache: "no-cache" }).then((r) => {
         if (!r.ok) throw new Error("venues.json");
         return r.json() as Promise<Venue[]>;
       }),
@@ -45,7 +45,9 @@ export default function App() {
 
   // Споените зони од 500 м се опционални — без нив се цртаат кругови.
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/zones.geojson`)
+    fetch(`${import.meta.env.BASE_URL}data/zones.geojson`, {
+      cache: "no-cache",
+    })
       .then((r) => (r.ok ? (r.json() as Promise<FeatureCollection>) : null))
       .then(setZones)
       .catch(() => setZones(null));
@@ -53,7 +55,9 @@ export default function App() {
 
   // Граници на општините (опционален слој).
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/municipalities.geojson`)
+    fetch(`${import.meta.env.BASE_URL}data/municipalities.geojson`, {
+      cache: "no-cache",
+    })
       .then((r) => (r.ok ? (r.json() as Promise<FeatureCollection>) : null))
       .then(setMuniBoundaries)
       .catch(() => setMuniBoundaries(null));

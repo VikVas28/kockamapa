@@ -134,6 +134,8 @@ export default function MapView({
   const markerRefs = useRef(new Map<string, LeafletMarker>());
   const [basemap, setBasemap] = useState<Basemap>("map");
   const [zoom, setZoom] = useState(12);
+  // Кликнато училиште — се прикажува неговиот личен круг од 500 м.
+  const [circledSchool, setCircledSchool] = useState<School | null>(null);
   const zoneStyle = ZONE_STYLES[basemap];
 
   return (
@@ -212,6 +214,21 @@ export default function MapView({
           />
         ))}
 
+      {/* Личен круг од 500 м на кликнатото училиште */}
+      {circledSchool && (
+        <Circle
+          center={[circledSchool.lat, circledSchool.lng]}
+          radius={RESTRICTION_RADIUS_M}
+          pathOptions={{
+            color: basemap === "map" ? "#dc2626" : "#ef4444",
+            weight: 2.5,
+            dashArray: "6 4",
+            opacity: 0.95,
+            fill: false,
+          }}
+        />
+      )}
+
       {showSchools &&
         schools.map((s) => (
           <CircleMarker
@@ -224,6 +241,11 @@ export default function MapView({
               fillColor: SCHOOL_COLORS[s.type],
               fillOpacity: 0.85,
             }}
+            eventHandlers={{
+              popupopen: () => setCircledSchool(s),
+              popupclose: () =>
+                setCircledSchool((cur) => (cur?.id === s.id ? null : cur)),
+            }}
           >
             <Popup>
               <div className="min-w-[180px] space-y-1 text-sm">
@@ -231,6 +253,9 @@ export default function MapView({
                 <p className="text-slate-500">
                   {SCHOOL_TYPE_LABELS[s.type]}
                   {s.municipality ? ` · ${s.municipality}` : ""}
+                </p>
+                <p className="text-xs text-slate-600">
+                  Испрекинатиот круг е зоната од 500 м на ова училиште.
                 </p>
                 <p className="text-xs text-slate-400">Извор: {s.source}</p>
               </div>
